@@ -1,0 +1,42 @@
+#+TITLE: SPADE Environment for Linux
+
+: 'SP'ecially 'A'dapted 'D'WM 'E'nvironment
+
+* What is SPADE?
+This is my repository for a basic, fully featured "desktop environment" using
+the [[https://dwm.suckless.org][DWM window manager]]. My goal for this repository is to have a base
+environment that I can quickly deploy on various workstations that I own, as
+well as provide a platform that makes it easy to maintain that environment and
+make changes over time. If you stumble upon this respository, I hope to make
+this environment rather easy to deploy on your end as well, but as with all
+things of this nature, ymmv.
+
+* Installation Notes
+*Note*: This repository is a work in progress as I build the environment,
+installation scripts, and procedure. While I intend to write scripts that will
+make it easy to install the environment and its dependencies, I assume this
+repository will always require some tweaking, and will most likely be constantly
+changed as I adapt my environment to my various workstations.
+
+The starting point for deploying my environment on a workspace will be the
+~./deploy-spade.sh~ shell script. It will run the user through a few questions
+ensuring some basic utilities are already installed to the user's liking (things
+like st, dmenu, and an editor which I have seperate configured repositories for).
+The script will then proceed to build the DWM environment, download the needed
+dependencies, and copy their configurations to the proper places. Note, the entire
+script makes the assumption that *the user has a working X display server already
+setup*. Setting up the X display server is out of scope of this repo.
+
+* Dependencies
+There are dependencies that need to be downloaded for both my build of DWM, as
+well as the peripheral applications I use for my environment. I am going to
+split them into dependencies needed for DWM specifically, and dependencies needed
+for my overall environment (other applications and their own dependencies).
+
+** DWM Dependencies
+To build DWM on its own, the gcc build tools need to be installed. This repo
+makes an assumption that standard commands like ~gcc~ and ~make~ can be executed on
+the target system. Other dependencies include the development files for ~libx11~,
+~libxft~ and ~libxinerama~. The deploy script will attempt to install these dependencies,
+making use of a /package command/ variable in the shell script that can be modified
+for your environment (defaults to using the ~xbps-install~ command for void linux).
