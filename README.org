@@ -40,3 +40,16 @@ the target system. Other dependencies include the development files for ~libx11~
 ~libxft~ and ~libxinerama~. The deploy script will attempt to install these dependencies,
 making use of a /package command/ variable in the shell script that can be modified
 for your environment (defaults to using the ~xbps-install~ command for void linux).
+
+** SPADE Dependencies and Features
+The following is a table of features that this environment provides, along with
+any associated dwm patches and dependencies that are used to provide the specific
+functionality:
+
+| Feature           | dwm Patch | Description                                        | Dependencies |
+|-------------------+-----------+----------------------------------------------------+--------------|
+| Autoset Wallpaper | *autostart* | Use nitrogen to automatically start the wallpaper. | nitrogen     |
+|                   |           |                                                    |              |
+
+Note, when a patch name is in *bold*, that indicates a config file or script should be present pertaining
+to that patch.

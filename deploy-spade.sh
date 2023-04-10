@@ -48,4 +48,11 @@ sudo make clean install
 cd ../
 echo "DWM Build Complete!"
 
+## Let's move all the configuration files to their rightful places
+echo "Attempting to apply configuration files..."
+# autostarts
+mkdir -p "$HOME/.local/share/dwm/"
+cp "config/autostart/autostart.sh" "$HOME/.local/share/dwm/"
+echo "Configuration files applied!"
+
 echo "SPADE Environment deployment Complete!"
