@@ -53,6 +53,7 @@ echo "Attempting to apply configuration files..."
 # autostarts
 mkdir -p "$HOME/.local/share/dwm/"
 cp "config/autostart/autostart.sh" "$HOME/.local/share/dwm/"
+chmod 755 "$HOME/.local/share/dwm/autostart.sh"
 echo "Configuration files applied!"
 
 echo "SPADE Environment deployment Complete!"
