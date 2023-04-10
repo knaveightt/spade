@@ -1,0 +1,13 @@
+"Pretty Tag Indicators"
+ - hide vacant tags
+ - show alternative tags
+ - rainbow tags
+ - underline tags
+ - xresources
+ - (check reddit posts to change tag color when occupied, modification using rainbow tags as well)
+ - status button (with xmenu)
+ - tag preview
+
+"utility"
+ - autostart patch
+ - restartsig
