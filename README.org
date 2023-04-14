@@ -52,5 +52,11 @@ functionality:
 | Restart Signal    | restartsig | Restart dwm with mod+ctrl+shift+q                  | /n/a/          |
 |                   |            |                                                    |              |
 
+*** Tags Bar Functionality
+| Feature          | dwm Patch       | Description                   | Dependencies |
+|------------------+-----------------+-------------------------------+--------------|
+| Alternative Tags | alternativetags | Show tag numbers on key press | /n/a/          |
+|                  |                 |                               |              |
+
 Note, when a patch name is in *bold*, that indicates a config file or script should be present pertaining
 to that patch.
