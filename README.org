@@ -1,3 +1,4 @@
+
 #+TITLE: SPADE Environment for Linux
 
 : 'SP'ecially 'A'dapted 'D'WM 'E'nvironment
@@ -57,6 +58,7 @@ functionality:
 |------------------+------------------+-------------------------------------------+--------------|
 | Alternative Tags | alternativetags  | Show tag numbers on key press             | /n/a/          |
 | Hide Vacant Tags | hide_vacant_tags | Only show those tags with clients in them | /n/a/          |
+| Underline Tags   | underlinetags    | Underlines the current selected tag       | /n/a/          |
 |                  |                  |                                           |              |
 
 Note, when a patch name is in *bold*, that indicates a config file or script should be present pertaining
