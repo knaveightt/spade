@@ -6,6 +6,7 @@
 ## Global Variables
 package_command="sudo xbps-install -S"
 dwm_dependencies="libX11-devel libXft-devel libXinerama-devel"
+program_dependencies="nitrogen"
 
 
 
@@ -47,6 +48,11 @@ cd dwm
 sudo make clean install
 cd ../
 echo "DWM Build Complete!"
+
+## Let's download all the program dependencies
+echo "Attempting to download program dependencies..."
+eval "$package_command $program_dependencies"
+echo "Program dependencies Installed!"
 
 ## Let's move all the configuration files to their rightful places
 echo "Attempting to apply configuration files..."
