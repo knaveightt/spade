@@ -6,7 +6,7 @@
 ## Global Variables
 package_command="sudo xbps-install -S"
 dwm_dependencies="libX11-devel libXft-devel libXinerama-devel"
-program_dependencies="nitrogen"
+program_dependencies="nitrogen xmenu"
 
 
 
@@ -55,11 +55,14 @@ eval "$package_command $program_dependencies"
 echo "Program dependencies Installed!"
 
 ## Let's move all the configuration files to their rightful places
-echo "Attempting to apply configuration files..."
+echo "Attempting to apply configuration files and scripts..."
 # autostarts
 mkdir -p "$HOME/.local/share/dwm/"
 cp "config/autostart/autostart.sh" "$HOME/.local/share/dwm/"
 chmod 755 "$HOME/.local/share/dwm/autostart.sh"
-echo "Configuration files applied!"
+# scripts
+mkdir -p "$HOME/.local/bin/"
+cp "scripts/xmenu/spade-xmenu.sh" "$HOME/.local/bin/"
+echo "Configuration files and scripts applied!"
 
 echo "SPADE Environment deployment Complete!"

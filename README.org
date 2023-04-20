@@ -54,13 +54,15 @@ functionality:
 |                   |            |                                                    |              |
 
 *** Bar Tags Functionality
-| Feature          | dwm Patch         | Description                                  | Dependencies |
-|------------------+-------------------+----------------------------------------------+--------------|
-| Alternative Tags | alternativetags   | Show tag numbers on key press                | /n/a/          |
-| Hide Vacant Tags | hide_vacant_tags  | Only show those tags with clients in them    | /n/a/          |
-| Underline Tags   | underlinetags     | Underlines the current selected tag          | /n/a/          |
-| Rainbow Tags     | rainbowtags (mod) | Modifed version of rainbow tags (color tags) | /n/a/          |
-|                  |                   |                                              |              |
+| Feature             | dwm Patch         | Description                                  | Dependencies |
+|---------------------+-------------------+----------------------------------------------+--------------|
+| Alternative Tags    | alternativetags   | Show tag numbers on key press                | /n/a/          |
+| Hide Vacant Tags    | hide_vacant_tags  | Only show those tags with clients in them    | /n/a/          |
+| Underline Tags      | underlinetags     | Underlines the current selected tag          | /n/a/          |
+| Rainbow Tags        | rainbowtags (mod) | Modifed version of rainbow tags (color tags) | /n/a/          |
+| Status(Menu) Button | statusbutton      | Provides clickable button before tags        | *xmenu*        |
+|                     |                   |                                              |              |
 
 Note, when a patch name is in *bold*, that indicates a config file or script should be present pertaining
-to that patch.
+to that patch. When a dependency name is in bold, that indicates a config file or script shoudl be present
+pertaining to that dependency.
