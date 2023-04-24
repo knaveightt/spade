@@ -63,6 +63,7 @@ chmod 755 "$HOME/.local/share/dwm/autostart.sh"
 # scripts
 mkdir -p "$HOME/.local/bin/"
 cp "scripts/xmenu/spade-xmenu.sh" "$HOME/.local/bin/"
+cp "dwm/layoutmenu.sh" "$HOME/.local/bin/"
 echo "Configuration files and scripts applied!"
 
 echo "SPADE Environment deployment Complete!"

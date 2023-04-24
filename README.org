@@ -61,6 +61,7 @@ functionality:
 | Underline Tags      | underlinetags     | Underlines the current selected tag          | /n/a/          |
 | Rainbow Tags        | rainbowtags (mod) | Modifed version of rainbow tags (color tags) | /n/a/          |
 | Status(Menu) Button | statusbutton      | Provides clickable button before tags        | *xmenu*        |
+| Layout Menu         | *layoutmenu*        | Provides a menu for layouts when clicked     | xmenu        |
 |                     |                   |                                              |              |
 
 Note, when a patch name is in *bold*, that indicates a config file or script should be present pertaining
