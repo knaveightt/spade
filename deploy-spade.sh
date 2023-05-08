@@ -5,7 +5,7 @@
 
 ## Global Variables
 package_command="sudo xbps-install -S"
-dwm_dependencies="libX11-devel libXft-devel libXinerama-devel"
+dwm_dependencies="libX11-devel libXft-devel libXinerama-devel imlib2 imlib2-devel"
 program_dependencies="nitrogen xmenu"
 
 

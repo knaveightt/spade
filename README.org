@@ -63,6 +63,7 @@ functionality:
 | Status(Menu) Button | statusbutton      | Provides clickable button before tags        | *xmenu*        |
 | Layout Menu         | *layoutmenu*        | Provides a menu for layouts when clicked     | xmenu        |
 | Awesomebar          | awesomebar        | Allows show/hiding windows clicked on bar    | /n/a/          |
+| Winicon             | winicon           | Allows showing app icons in bar              | /n/a/          |
 |                     |                   |                                              |              |
 
 Note, when a patch name is in *bold*, that indicates a config file or script should be present pertaining
