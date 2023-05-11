@@ -69,3 +69,17 @@ functionality:
 Note, when a patch name is in *bold*, that indicates a config file or script should be present pertaining
 to that patch. When a dependency name is in bold, that indicates a config file or script shoudl be present
 pertaining to that dependency.
+
+*** Additional Modifications
+**** View Occupied Tags
+I have added a function that works pretty well when using the hide_vacant_tags patch. Since that patch
+minimizes the tags shown in the tag bar to only those that have clients associated with them, I changed
+the way I select a tag to view by allowing the number keys to align to the visible tags shown in the bar.
+This means, using the viewoccupied function, using ~Mod+1~ to view a tag views the *first occupied* tag, not
+just tag #1. Similarly, ~Mod+2~ views the *second occupied tag*, and so on. This makes it really easy to
+switch occupied tags matching visually to what is shown in the tag bar.
+
+Now, if I want to select a tag # where there is a conflict (say I want to select Tag #1, but the first
+occupied Tag is Tag #3), I have two choices. I can use ~Mod+Alt+Tag#~ to force-select the tag to view,
+or I can use ~Mod+0~ to show/view all tags, and then select the specific one I want to view. This gives a
+couple quality of life options, but also flexibility, in choosing the tags I want to work with.
