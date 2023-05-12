@@ -49,6 +49,13 @@ sudo make clean install
 cd ../
 echo "DWM Build Complete!"
 
+## Let's build and install dwmblocks as well
+echo "Attempting to build dwmblocks..."
+cd dwmblocks
+sudo make clean install
+cd ../
+echo "dwmblock Build Complete!"
+
 ## Let's download all the program dependencies
 echo "Attempting to download program dependencies..."
 eval "$package_command $program_dependencies"

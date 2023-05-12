@@ -71,7 +71,7 @@ to that patch. When a dependency name is in bold, that indicates a config file o
 pertaining to that dependency.
 
 *** Status Bar Functionality and dwmblocks(async)
-For my status bar region, I use the [dwmblocks-async](https://github.com/UtkarshVerma/dwmblocks-async) build
+For my status bar region, I use the [[https://github.com/UtkarshVerma/dwmblocks-async][dwmblocks-async]] build
 to provide the status text to dwm. To accomplish this to my liking, I had to add a few additional dwm patches
 to support this.
 
@@ -82,7 +82,7 @@ to support this.
 | Clickable Status    | statuscmd        | Provides ability to execute commands when clicking status regions | /n/a/          |
 
 **** dwmblocks-async
-My build of [dwmblocks](https://github.com/knaveightt/dwmblocks) provides the system to script the functionality and
+My build of [[https://github.com/knaveightt/dwmblocks][dwmblocks]] provides the system to script the functionality and
 contents of my status bar. To accomplish this, scripts are provided in the dwmblocks/scripts directory.
 
 
