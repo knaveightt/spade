@@ -56,14 +56,17 @@ echo "Program dependencies Installed!"
 
 ## Let's move all the configuration files to their rightful places
 echo "Attempting to apply configuration files and scripts..."
+
 # autostarts
 mkdir -p "$HOME/.local/share/dwm/"
 cp "config/autostart/autostart.sh" "$HOME/.local/share/dwm/"
 chmod 755 "$HOME/.local/share/dwm/autostart.sh"
+
 # scripts
 mkdir -p "$HOME/.local/bin/"
 cp "scripts/xmenu/spade-xmenu.sh" "$HOME/.local/bin/"
 cp "dwm/layoutmenu.sh" "$HOME/.local/bin/"
+cp "dwmblocks/scripts/*" "$HOME/.local/bin/"
 echo "Configuration files and scripts applied!"
 
 echo "SPADE Environment deployment Complete!"

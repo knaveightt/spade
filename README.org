@@ -53,22 +53,38 @@ functionality:
 | Restart Signal    | restartsig | Restart dwm with mod+ctrl+shift+q                  | /n/a/          |
 |                   |            |                                                    |              |
 
-*** Bar Tags Functionality
-| Feature             | dwm Patch         | Description                                  | Dependencies |
-|---------------------+-------------------+----------------------------------------------+--------------|
-| Alternative Tags    | alternativetags   | Show tag numbers on key press                | /n/a/          |
-| Hide Vacant Tags    | hide_vacant_tags  | Only show those tags with clients in them    | /n/a/          |
-| Underline Tags      | underlinetags     | Underlines the current selected tag          | /n/a/          |
-| Rainbow Tags        | rainbowtags (mod) | Modifed version of rainbow tags (color tags) | /n/a/          |
-| Status(Menu) Button | statusbutton      | Provides clickable button before tags        | *xmenu*        |
-| Layout Menu         | *layoutmenu*        | Provides a menu for layouts when clicked     | xmenu        |
-| Awesomebar          | awesomebar        | Allows show/hiding windows clicked on bar    | /n/a/          |
-| Winicon             | winicon           | Allows showing app icons in bar              | /n/a/          |
-|                     |                   |                                              |              |
+*** Tag/Window Bar Functionality
+| Feature              | dwm Patch         | Description                                  | Dependencies |
+|----------------------+-------------------+----------------------------------------------+--------------|
+| Alternative Tags     | alternativetags   | Show tag numbers on key press                | /n/a/          |
+| Hide Vacant Tags     | hide_vacant_tags  | Only show those tags with clients in them    | /n/a/          |
+| Underline Tags       | underlinetags     | Underlines the current selected tag          | /n/a/          |
+| Rainbow Tags         | rainbowtags (mod) | Modifed version of rainbow tags (color tags) | /n/a/          |
+| Status(Menu) Button  | statusbutton      | Provides clickable button before tags        | *xmenu*        |
+| Layout Menu          | *layoutmenu*        | Provides a menu for layouts when clicked     | xmenu        |
+| Awesomebar Functions | awesomebar        | Allows show/hiding windows clicked on bar    | /n/a/          |
+| Window Icons         | winicon           | Allows showing app icons in bar              | /n/a/          |
+|                      |                   |                                              |              |
 
 Note, when a patch name is in *bold*, that indicates a config file or script should be present pertaining
 to that patch. When a dependency name is in bold, that indicates a config file or script shoudl be present
 pertaining to that dependency.
+
+*** Status Bar Functionality and dwmblocks(async)
+For my status bar region, I use the [dwmblocks-async](https://github.com/UtkarshVerma/dwmblocks-async) build
+to provide the status text to dwm. To accomplish this to my liking, I had to add a few additional dwm patches
+to support this.
+
+| Feature             | dwm Patch        | Description                                                       | Dependencies |
+|---------------------+------------------+-------------------------------------------------------------------+--------------|
+| Colored Status Text | status2d+systray | Provides the ability to enable color in status text               | /n/a/          |
+| System Tray         | status2d+systray | Provides a system tray in the dwm bar                             | n/a          |
+| Clickable Status    | statuscmd        | Provides ability to execute commands when clicking status regions | /n/a/          |
+
+**** dwmblocks-async
+My build of [dwmblocks](https://github.com/knaveightt/dwmblocks) provides the system to script the functionality and
+contents of my status bar. To accomplish this, scripts are provided in the dwmblocks/scripts directory.
+
 
 *** Additional Modifications
 **** View Occupied Tags
