@@ -40,6 +40,16 @@ then
     exit 1
 fi
 
+echo "Do you have the right fonts installed for these prerequisites,\nas well as this build of dwm (y|n)"
+read predeps
+
+if [[ $predeps == "n" ]] || [[ $predeps == "N" ]]
+then
+    echo "Please install the right fonts before continuing."
+    exit 1
+fi
+
+
 ## Let's build and install the DWM window manager
 echo "Attempting to build DWM..."
 eval "$package_command $dwm_dependencies"
