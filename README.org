@@ -1,4 +1,3 @@
-
 #+TITLE: SPADE Environment for Linux
 
 : 'SP'ecially 'A'dapted 'D'WM 'E'nvironment
