@@ -88,6 +88,7 @@ cp "scripts/xmenu/spade-xmenu.sh" "$HOME/.local/bin/"
 cp "dwm/layoutmenu.sh" "$HOME/.local/bin/"
 cp "dwmblocks/scripts/*" "$HOME/.local/bin/"
 cp "scripts/rofi/spade-rofi-launch.sh" "$HOME/.local/bin/"
+cp "scripts/rofi/spade-rofi-win.sh" "$HOME/.local/bin/"
 echo "Configuration files and scripts applied!"
 
 echo "SPADE Environment deployment Complete!"
