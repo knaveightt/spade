@@ -6,7 +6,7 @@
 ## Global Variables
 package_command="sudo xbps-install -S"
 dwm_dependencies="libX11-devel libXft-devel libXinerama-devel imlib2 imlib2-devel"
-program_dependencies="nitrogen xmenu"
+program_dependencies="nitrogen xmenu rofi"
 
 
 
@@ -79,11 +79,15 @@ mkdir -p "$HOME/.local/share/dwm/"
 cp "config/autostart/autostart.sh" "$HOME/.local/share/dwm/"
 chmod 755 "$HOME/.local/share/dwm/autostart.sh"
 
+# rofi configurations
+cp -r "config/rofi" "$HOME/.config/"
+
 # scripts
 mkdir -p "$HOME/.local/bin/"
 cp "scripts/xmenu/spade-xmenu.sh" "$HOME/.local/bin/"
 cp "dwm/layoutmenu.sh" "$HOME/.local/bin/"
 cp "dwmblocks/scripts/*" "$HOME/.local/bin/"
+cp "scripts/rofi/spade-rofi-launch.sh" "$HOME/.local/bin/"
 echo "Configuration files and scripts applied!"
 
 echo "SPADE Environment deployment Complete!"

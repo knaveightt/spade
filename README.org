@@ -46,23 +46,26 @@ The following is a table of features that this environment provides, along with
 any associated dwm patches and dependencies that are used to provide the specific
 functionality:
 
-| Feature           | dwm Patch  | Description                                        | Dependencies |
-|-------------------+------------+----------------------------------------------------+--------------|
-| Autoset Wallpaper | *autostart*  | Use nitrogen to automatically start the wallpaper. | nitrogen     |
-| Restart Signal    | restartsig | Restart dwm with mod+ctrl+shift+q                  | /n/a/          |
-|                   |            |                                                    |              |
+| Feature           | dwm Patch   | Description                                        | Dependencies |
+|-------------------+-------------+----------------------------------------------------+--------------|
+| Autoset Wallpaper | *autostart* | Use nitrogen to automatically start the wallpaper. | nitrogen     |
+| Restart Signal    | restartsig  | Restart dwm with mod+ctrl+shift+q                  | /n/a/        |
+| Rofi Prompt       | /n/a/       | Use rofi as a system and run prompt                | *rofi*       |
+
+Note for *rofi*: I have included both the script used to launch rofi from DWM, as well as a whole folder
+of configuration of rofi themes, the latest can be found [[https://github.com/adi1090x/rofi][at this github repository]].
 
 *** Tag/Window Bar Functionality
 | Feature              | dwm Patch         | Description                                  | Dependencies |
 |----------------------+-------------------+----------------------------------------------+--------------|
-| Alternative Tags     | alternativetags   | Show tag numbers on key press                | /n/a/          |
-| Hide Vacant Tags     | hide_vacant_tags  | Only show those tags with clients in them    | /n/a/          |
-| Underline Tags       | underlinetags     | Underlines the current selected tag          | /n/a/          |
-| Rainbow Tags         | rainbowtags (mod) | Modifed version of rainbow tags (color tags) | /n/a/          |
-| Status(Menu) Button  | statusbutton      | Provides clickable button before tags        | *xmenu*        |
-| Layout Menu          | *layoutmenu*        | Provides a menu for layouts when clicked     | xmenu        |
-| Awesomebar Functions | awesomebar        | Allows show/hiding windows clicked on bar    | /n/a/          |
-| Window Icons         | winicon           | Allows showing app icons in bar              | /n/a/          |
+| Alternative Tags     | alternativetags   | Show tag numbers on key press                | /n/a/        |
+| Hide Vacant Tags     | hide_vacant_tags  | Only show those tags with clients in them    | /n/a/        |
+| Underline Tags       | underlinetags     | Underlines the current selected tag          | /n/a/        |
+| Rainbow Tags         | rainbowtags (mod) | Modifed version of rainbow tags (color tags) | /n/a/        |
+| Status(Menu) Button  | statusbutton      | Provides clickable button before tags        | *xmenu*      |
+| Layout Menu          | *layoutmenu*      | Provides a menu for layouts when clicked     | xmenu        |
+| Awesomebar Functions | awesomebar        | Allows show/hiding windows clicked on bar    | /n/a/        |
+| Window Icons         | winicon           | Allows showing app icons in bar              | /n/a/        |
 |                      |                   |                                              |              |
 
 Note, when a patch name is in *bold*, that indicates a config file or script should be present pertaining
@@ -76,9 +79,9 @@ to support this.
 
 | Feature             | dwm Patch        | Description                                                       | Dependencies |
 |---------------------+------------------+-------------------------------------------------------------------+--------------|
-| Colored Status Text | status2d+systray | Provides the ability to enable color in status text               | /n/a/          |
+| Colored Status Text | status2d+systray | Provides the ability to enable color in status text               | /n/a/        |
 | System Tray         | status2d+systray | Provides a system tray in the dwm bar                             | n/a          |
-| Clickable Status    | statuscmd        | Provides ability to execute commands when clicking status regions | /n/a/          |
+| Clickable Status    | statuscmd        | Provides ability to execute commands when clicking status regions | /n/a/        |
 
 **** dwmblocks-async
 My build of [[https://github.com/knaveightt/dwmblocks][dwmblocks]] provides the system to script the functionality and
