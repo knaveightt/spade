@@ -68,6 +68,8 @@ of configuration of rofi themes, the latest can be found [[https://github.com/ad
 | Window Icons         | winicon           | Allows showing app icons in bar                         | /n/a/        |
 | Focus on Urgent      | focusonnetactive  | Automatically Switches to Urgent Window                 | *rofi*       |
 | Switch To Tag        | switchtotag       | Adds to client rules to switch to new tag automatically | /n/a/        |
+| Window Gaps          | vanitygaps        | Adds gaps and gap logic to client windows               | /n/a/        |
+| Multiple Layouts     | vanitygaps        | Includes many different dynamic layouts                 | /n/a/        |
 
 Note, when a patch name is in *bold*, that indicates a config file or script should be present pertaining
 to that patch. When a dependency name is in bold, that indicates a config file or script shoudl be present
