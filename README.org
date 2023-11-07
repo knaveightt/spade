@@ -90,6 +90,9 @@ to support this.
 My build of [[https://github.com/knaveightt/dwmblocks][dwmblocks]] provides the system to script the functionality and
 contents of my status bar. To accomplish this, scripts are provided in the dwmblocks/scripts directory.
 
+*** Emacs Service File for Void Linux
+<todo, instructions and files for launching the emacs service>
+<.local/ service, emacs, updates to autostart>
 
 *** Additional Modifications
 **** View Occupied Tags
