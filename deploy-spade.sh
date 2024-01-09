@@ -90,4 +90,10 @@ cp "dwmblocks/scripts/*" "$HOME/.local/bin/"
 cp "scripts/rofi/spade-rofi-prompt.sh" "$HOME/.local/bin/"
 echo "Configuration files and scripts applied!"
 
+# emacs service files
+mkdir -p "$HOME/.local/emacs"
+mkdir -p "$HOME/.local/service/"
+cp "services/emacs/*" "$HOME/.local/emacs/"
+echo "Successfully copied emacs service files!"
+
 echo "SPADE Environment deployment Complete!"

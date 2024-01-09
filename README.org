@@ -91,8 +91,20 @@ My build of [[https://github.com/knaveightt/dwmblocks][dwmblocks]] provides the 
 contents of my status bar. To accomplish this, scripts are provided in the dwmblocks/scripts directory.
 
 *** Emacs Service File for Void Linux
-<todo, instructions and files for launching the emacs service>
-<.local/ service, emacs, updates to autostart>
+I have added files that allow me to launch emacs as a runit service.  This works
+well because it pre-loads my emacs configuration and makes opening emacs buffers
+really fast.
+
+While the service files should have been copied over, you will need to run the
+command that adds a new services directory, and symlink the emacs service folder
+to this directory so it is run.
+
+The following is already added to the autostart script in .local/share/dwm:
+: runsvdir -P "${HOME}/.local/service/"
+
+If I just sym link the emacs service folder .local/emacs to ths above directory,
+it should work. Comments at this link should also explain more:
+https://www.reddit.com/r/voidlinux/comments/uomxrx/how_to_daemonize_emacs_as_user_service/
 
 *** Additional Modifications
 **** View Occupied Tags
