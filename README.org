@@ -51,9 +51,15 @@ functionality:
 | Autoset Wallpaper | *autostart* | Use nitrogen to automatically start the wallpaper. | nitrogen     |
 | Restart Signal    | restartsig  | Restart dwm with mod+ctrl+shift+q                  | /n/a/        |
 | Rofi Prompt       | /n/a/       | Use rofi as a system and run prompt                | *rofi*       |
+| File Browsers     | /n/a/       | Use lf as terminal browser, thunar as gui browser  | lf, thunar   |
 
+**** Rofi
 Note for *rofi*: I have included both the script used to launch rofi from DWM, as well as a whole folder
 of configuration of rofi themes, the latest can be found [[https://github.com/adi1090x/rofi][at this github repository]].
+
+**** lf
+Application config files for lf are included. There are additional instructions included in these
+configs to make the previewer work in the terminal.
 
 *** Tag/Window Bar Functionality
 | Feature              | dwm Patch         | Description                                             | Dependencies |
@@ -89,6 +95,7 @@ to support this.
 **** dwmblocks-async
 My build of [[https://github.com/knaveightt/dwmblocks][dwmblocks]] provides the system to script the functionality and
 contents of my status bar. To accomplish this, scripts are provided in the dwmblocks/scripts directory.
+
 
 *** Emacs Service File for Void Linux
 I have added files that allow me to launch emacs as a runit service.  This works

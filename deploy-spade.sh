@@ -6,7 +6,7 @@
 ## Global Variables
 package_command="sudo xbps-install -S"
 dwm_dependencies="libX11-devel libXft-devel libXinerama-devel imlib2 imlib2-devel"
-program_dependencies="nitrogen xmenu rofi"
+program_dependencies="nitrogen xmenu rofi lf Thunar thunar-archive-plugin thunar-volman"
 
 
 
@@ -81,6 +81,9 @@ chmod 755 "$HOME/.local/share/dwm/autostart.sh"
 
 # rofi configurations
 cp -r "config/rofi" "$HOME/.config/"
+
+# lf configurations
+cp -r "config/lf" "$HOME/.config/"
 
 # scripts
 mkdir -p "$HOME/.local/bin/"

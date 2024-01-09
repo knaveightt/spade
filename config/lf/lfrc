@@ -1,0 +1,99 @@
+# Note on Image Previews
+# I am using the scripts found at https://github.com/thimc/lfimg
+# for setting up the image previews feature.
+# Check the readme in that repository for a few required programs needed
+# to view previews, and to make sure the preview/cleaner files referenced
+# in the below settings variables are up to date.
+
+# Basic Settings
+set ignorecase true
+set icons true # see icons file
+set previewer '~/.config/lf/preview'
+set cleaner '~/.config/lf/cleaner'
+
+# Custom Functions
+
+# open command example
+#cmd open ${{
+#    case $(file --mime-type "$(readlink -f $f)" -b) in
+#	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) localc $fx ;;
+#	image/vnd.djvu|application/pdf|application/octet-stream|application/postscript) setsid -f zathura $fx >/dev/null 2>&1 ;;
+#        text/*|application/json|inode/x-empty|application/x-subrip) $EDITOR $fx;;
+#	image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
+#	image/svg+xml) display -- $f ;;
+#	image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|avif\|tif\|ico\)\(_large\)*$" |
+#		setsid -f sxiv -aio 2>/dev/null | while read -r file; do
+#			[ -z "$file" ] && continue
+#			lf -remote "send select \"$file\""
+#			lf -remote "send toggle"
+#		done &
+#		;;
+#	audio/*|video/x-ms-asf) mpv --audio-display=no $f ;;
+#	video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+#	application/pdf|application/vnd.djvu|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
+#	application/pgp-encrypted) $EDITOR $fx ;;
+#	application/vnd.openxmlformats-officedocument.wordprocessingml.document|application/vnd.oasis.opendocument.text) setsid -f lowriter $fx >/dev/null 2>&1 ;;
+#	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet|application/octet-stream|application/vnd.oasis.opendocument.spreadsheet|application/vnd.oasis.opendocument.spreadsheet-template) setsid -f localc $fx >/dev/null 2>&1 ;;
+#	application/vnd.openxmlformats-officedocument.presentationml.presentation|application/vnd.oasis.opendocument.presentation-template|application/vnd.oasis.opendocument.presentation|application/vnd.ms-powerpoint) setsid -f loimpress $fx >/dev/null 2>&1 ;;
+#	application/vnd.oasis.opendocument.graphics|application/vnd.oasis.opendocument.graphics-template) setsid -f lodraw $fx >/dev/null 2>&1 ;;
+#	application/vnd.oasis.opendocument.formula) setsid -f lomath $fx >/dev/null 2>&1 ;;
+#	application/vnd.oasis.opendocument.database) setsid -f lobase $fx >/dev/null 2>&1 ;;
+#        *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
+#    esac
+#}}
+
+
+cmd mkdir ${{
+    printf "Enter Folder Name: "
+    read ans
+    mkdir $ans
+}}
+
+cmd unarchive ${{
+    case "$f" in
+        *.zip) 
+            unzip "$f" 
+            ;;
+        *.tar.gz)
+            directory=$(basename "$f" .tar.gz)
+            mkdir "$directory"
+            tar -xzvf "$f" -C "$directory" 
+            ;;
+        *.tar.gz2) 
+            tar -xjvf "$f" 
+            ;;
+        *.tar) 
+            directory=$(basename "$f" .tar)
+            mkdir "$directory"
+            tar -xvf "$f" -C "$directory" 
+            ;;
+        *) echo "Unsupported format" ;;
+    esac
+}}
+
+cmd openeditor ${{
+    emacsclient -t "$f"
+}}
+
+cmd openthunar ${{
+    thunar &
+}}
+
+# Map Keys for Custom Functions
+map o mkdir
+map au unarchive
+
+# Additional Default Command Mappings
+map DD delete
+map ZD openthunar 
+map ZZ openeditor
+
+# Directory Movement Mappings
+map g. cd ~/.config
+map gD cd ~/Downloads
+map gd cd ~/Documents
+map gm cd ~/Music
+map gp cd ~/Pictures
+map gR cd ~/Run
+map gP cd ~/Projects
+map gS cd ~/Shelf
